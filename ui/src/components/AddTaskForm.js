@@ -7,6 +7,10 @@ import AddIcon from "@mui/icons-material/Add";
 // materialUI basic text field
 export const AddTaskForm = () => {
   const [newTask, setNewTask] = useState("");
+  
+  const addNewTask = () => {
+    console.log("add new task clicked");
+  } 
     return (
     <div>
         <Typography align='center' variant='h2' paddingTop={2} paddingBottom={2}>
@@ -18,7 +22,10 @@ export const AddTaskForm = () => {
         variant="outlined" 
         value={newTask} 
         onChange={(e) => setNewTask(e.target)} />
-        <Button>
+        <Button 
+        disabled={!newTask.length}
+        variant="outlined" 
+        onClick={addNewTask}>
             <AddIcon />
         </Button>
     </div>
