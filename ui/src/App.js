@@ -1,9 +1,9 @@
-
+import { AddTaskForm } from "./components/AddTaskForm";
 
 function App() {
   return (
     <div className="App">
-      Hello world
+      <AddTaskForm />
     </div>
   );
 }
