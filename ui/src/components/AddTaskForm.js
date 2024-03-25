@@ -16,6 +16,7 @@ export const AddTaskForm = () => {
         <Typography align='center' variant='h2' paddingTop={2} paddingBottom={2}>
         My Task List
         </Typography>
+        <div className="addTaskForm">
         <TextField 
         size="small" 
         label="Task" 
@@ -28,7 +29,8 @@ export const AddTaskForm = () => {
         onClick={addNewTask}>
             <AddIcon />
         </Button>
-    </div>
+        </div>
+      </div>  
   );
 };
 
