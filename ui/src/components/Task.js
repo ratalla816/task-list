@@ -19,7 +19,7 @@ export const Task = ({task}) => {
     }
 
   return (
-    <div classname="task">
+    <div className="task">
        <div className={classnames("flex", {
         done: isComplete
     })}>
