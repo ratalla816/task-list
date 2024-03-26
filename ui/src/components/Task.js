@@ -8,15 +8,15 @@ import classnames from "classnames";
 export const Task = ({task}) => {
     const { id, name, completed } = task;
     const { isComplete, setIsComplete } = useState(completed);
-    const { isDialogueOpen, setIsDialogueOpen } = useState(false);
+    const { isDialogOpen, setIsDialogOpen } = useState(false);
     
     const handleUpdateTaskCompletion = () => {
-        setIsComplete((prev) => !prev)
-    }
+        setIsComplete((prev) => !prev);
+    };
 
     const handleDeleteTask = () => {
-        console.log("delete task")
-    }
+        console.log("delete task");
+    };
 
   return (
     <div className="task">
@@ -24,11 +24,11 @@ export const Task = ({task}) => {
         done: isComplete
     })}>
 
-    <Checkbox checked = {isComplete} onChange={ handleUpdateTaskCompletion } />
-    <Typography variant="h4"> {name}</Typography>
+    <Checkbox checked = { isComplete } onChange = { handleUpdateTaskCompletion } />
+    <Typography variant="h4">{ name }</Typography>
    </div>
    <div className="taskButtons"> 
-    <Button variant="contained" onClick={() => setIsDialogueOpen(true)}>
+    <Button variant="contained" onClick={() => setIsDialogOpen(true)}>
         <EditIcon />
     </Button>
 
@@ -41,8 +41,8 @@ export const Task = ({task}) => {
     </div>
 
     <UpdateTaskForm 
-    isDialogueOpen={isDialogueOpen} 
-    setIsDialogueOpen={setIsDialogueOpen}
+    isDialogOpen={isDialogOpen} 
+    setIsDialogOpen={setIsDialogOpen}
     task={task}
     />
     

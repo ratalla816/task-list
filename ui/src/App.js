@@ -1,18 +1,7 @@
-// import { AddTaskForm } from "./components/AddTaskForm";
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <AddTaskForm />
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { AddTaskForm } from "./components/AddTaskForm";
+import { Task } from "./components/Task";
 
 const darkTheme = createTheme({
   palette: {
@@ -20,11 +9,18 @@ const darkTheme = createTheme({
   },
 });
 
+const task = {
+  id: '1',
+  name: 'Do dishes',
+  completed: false,
+};
+
 export default function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
       <AddTaskForm /> 
+      <Task task = { task } />
      </ThemeProvider>
   );
 }
